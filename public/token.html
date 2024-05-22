@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token</title>
+
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/token.css">
+</head>
+<body>
+    
+    <header id="header"></header>
+
+    <div class="main">
+        
+        <div class="first_layer">
+            <div class="first_row_1">
+                <div class="first_row_box_one">
+                    <div class="gas_price_into_title">Gas Price</div>
+                    <div class="gas_price_into_gwei">45 GWEI</div>
+                    <div class="gas_price_into_usdt">
+                        Price: &nbsp;
+                        <p>3434</p>
+                        &nbsp;USDT
+                    </div>
+                </div>
+                <div class="first_row_box_two"></div>
+                <div class="first_row_box_three"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    try {
+      
+      const header_fetch = fetch('../header.html');
+
+      const [header_fetch_response] = await Promise.all([header_fetch]);
+
+      if (!header_fetch_response.ok) throw new Error('Network response for header was not ok'); 
+
+      const headerData = await header_fetch_response.text();
+
+      document.querySelector('#header').innerHTML = headerData;
+
+      header();
+    } catch (error) {
+      console.error('Error loading header.html:', error);
+    }
+  });
+</script>

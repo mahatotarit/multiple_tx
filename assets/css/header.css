@@ -1,0 +1,67 @@
+@import url("color.css");
+
+*{
+    margin: 00px;
+    padding: 00px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    width: 100%;
+}
+
+.header_parent{
+    background-color: var(--header_bg);
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    background-color: var(--background_color);
+}
+.header_parent .web_name_h{
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.header_parent .header_first_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+.header_parent .connect_wallet_btn{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.header_parent .page_select_tag{
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+
+    min-width: 10rem;
+    background-color: var(--white);
+    font-size: 16px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjY2IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMTUuMjU2bC02LjM3OC02LjM3OGMtLjM5Ni0uMzk2LS4zOTYtMS4wMDEgMC0xLjM5Ni4zOTYtLjM5NiAxLjAwMS0uMzk2IDEuMzk3IDBsNS42MzkgNS42MzkgNS42MzktNS42MzljLjM5Ni0uMzk2IDEuMDAxLS4zOTYgMS4zOTcgMCAuMzk1LjM5Ni4zOTUgMS4wMDEgMCAxLjM5NmwtNi4zNzggNi4zNzhjLS4zOTUuMzk1LTEuMDAxLjM5NS0xLjM5NiAwWiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.header_parent .page_select_tag option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}

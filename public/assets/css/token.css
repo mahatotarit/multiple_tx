@@ -1,0 +1,45 @@
+*{
+    border: 1px solid black;
+}
+.main{
+    padding: 1rem 10%;
+}
+.main *{
+    font-family: 'Courier New', Courier, monospace;
+}
+.first_row_1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+.first_row_box_one,
+.first_row_box_two,
+.first_row_box_three{
+    padding: 10px;
+    border-radius: 10px;
+    background-color:var(--secondary_color);
+    width: 33%;
+}
+.first_row_box_one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.first_row_box_one{
+    color: var(--accent_color);
+}
+.gas_price_into_gwei{
+    font-size: 1.2rem;
+}
+.gas_price_into_title{
+    font-size: 0.8rem;
+}
+.gas_price_into_usdt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
