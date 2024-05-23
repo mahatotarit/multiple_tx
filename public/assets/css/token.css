@@ -22,14 +22,26 @@
     width: 33%;
 }
 .first_row_box_one{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+.first_row_box_two{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
 }
+.first_row_box_two,
 .first_row_box_one{
     color: var(--accent_color);
+}
+.first_row_box_one .network_logo{
+   height: 3rem;
+   width: 3rem;
 }
 .gas_price_into_gwei{
     font-size: 1.2rem;
