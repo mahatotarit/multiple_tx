@@ -26,7 +26,7 @@
     padding: 10px;
     border-radius: 10px;
     background-color:var(--secondary_color);
-    width: 23%;
+    width: 23.55%;
     max-height:100px;
     min-height:98px;
 }
@@ -247,4 +247,271 @@
     outline: none;
     background-color: transparent;
     font-size: 1rem;
+}
+.collapce_box{
+    transition:0.5s;
+    /* display:none; */
+}
+
+
+.five_layer .five_row_1{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.five_layer .five_row_1 .input-container {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.five_layer .five_row_1 input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.five_layer .five_row_1 input:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+
+.five_layer .five_row_2{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.five_layer .five_row_2 .input-container {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.five_layer .five_row_2 input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.five_layer .five_row_2 input:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+
+.six_layer .six_row_1{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+.six_layer .six_row_1 .select_parent_div{
+    width: 50%;
+    position: relative;
+
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.six_layer .six_row_1 select {
+    appearance: none;
+    padding: 1rem;  
+    font-size: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    background-color: var(--white);
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+.six_layer .six_row_1 select::-ms-expand {
+    display: none;
+}
+
+.six_layer .six_row_1 select option {
+    padding: 10px;
+}
+.six_layer .six_row_1 select:hover, .six_layer .six_row_1 select:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+
+
+
+
+
+.six_layer .six_row_2{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.six_layer .six_row_2 .input-container {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.six_layer .six_row_2 input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.six_layer .six_row_2 input:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+
+.seven_layer .seven_row_1{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.seven_layer .seven_row_1 .select_parent_div{
+    width: 40%;
+    position: relative;
+
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.seven_layer .seven_row_1 select {
+    appearance: none;
+    padding: 1rem;  
+    font-size: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    background-color: var(--white);
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+.seven_layer .seven_row_1 select::-ms-expand {
+    display: none;
+}
+
+.seven_layer .seven_row_1 select option {
+    padding: 10px;
+}
+.seven_layer .seven_row_1 select:hover, .seven_layer .seven_row_1 select:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+
+
+
+
+.seven_layer .seven_row_2{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.seven_layer .seven_row_2 .input-container {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.seven_layer .seven_row_2 input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.seven_layer .seven_row_2 input:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+
+.seven_layer .seven_row_1 .input-container {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.seven_layer .seven_row_1 input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.seven_layer .seven_row_1 input:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
 }
