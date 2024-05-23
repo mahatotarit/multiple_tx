@@ -39,88 +39,101 @@
                     &nbsp;USDT
                 </div>
               </div>
-              <div class="first_row_box_three">
-                <div class="time_into_title">Time</div>
-                <div id="time_zone_time"></div>
-                <div id="time_zone_name"></div>
-              </div>
-          </div>
-      </div>
-
-      <div class="second_layer">
-        <div class="second_row_1">
-
-              <div class="select_parent_div">
-                <div class="input_title_div">Select Network:</div>
-                <div class="select_arrow_contrainer">
-                  <select>
-                      <option value="" selected disabled>Select Network</option>
-                      <option value="network1">Main Network</option>
-                      <option value="network2">Test Network</option>
-                  </select>
+              <div class="first_row_box_four">
+                <div class="block_into_title">Latest Block</div>
+                <div class="block_into_number">45234234</div>
+                <div class="block_into_timestapm">
+                  Block Destance:&nbsp;<span>3 Sec</span>
                 </div>
               </div>
-
-              <div class="select_parent_div">
-                <div class="input_title_div">Select Chain:</div>
-                <select>
-                  <option value="" selected disabled>Select Chain</option>
-                  <option value="network1">Ethrerum</option>
-                  <option value="network2">BNB Chain</option>
-              </select>
+              <div class="first_row_box_three">
+                <div class="time_into_title">Time</div>
+                <div id="time_zone_time" class="time_zone_time"></div>
+                <div id="time_zone_name" class="time_zone_name"></div>
               </div>
-
-        </div>
+          </div>
       </div>
 
-      <div class="third_layer">
-        <div class="third_row_1">
+      <div class="step_div">
 
-              <div class="select_parent_div">
-                <div class="input_title_div">Select Token Action:</div>
-                <select>
-                  <option value="" selected disabled>Select Token Action</option>
-                  <option value="network1">Transfer Token</option>
-                  <option value="network2">Approve Token</option>
-              </select>
-              </div>
-
+        <div class="step_heading_div">
+           <b>Step 1</b>
+           <button>🔽</button>
         </div>
-      </div>
 
-      <div class="fourth_layer">
-        <div class="fourth_row_1">
-          <div class="input-container">
-            <div class="input_title_div">Token Contract Address:</div>
-              <input type="text" placeholder="Enter your Token Contract">
+        <div class="collapce_box" id="first_step_co_box">
+          <div class="second_layer">
+            <div class="second_row_1">
+
+                  <div class="select_parent_div">
+                    <div class="input_title_div">Select Network:</div>
+                    <div class="select_arrow_contrainer">
+                      <select>
+                          <option value="" selected disabled>Select Network</option>
+                          <option value="network1">Main Network</option>
+                          <option value="network2">Test Network</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="select_parent_div">
+                    <div class="input_title_div">Select Chain:</div>
+                    <select>
+                      <option value="" selected disabled>Select Chain</option>
+                      <option value="network1">Ethrerum</option>
+                      <option value="network2">BNB Chain</option>
+                  </select>
+                  </div>
+
+            </div>
+          </div>
+
+          <div class="third_layer">
+            <div class="third_row_1">
+
+                  <div class="select_parent_div">
+                    <div class="input_title_div">Select Token Action:</div>
+                    <select>
+                      <option value="" selected disabled>Select Token Action</option>
+                      <option value="network1">Transfer Token</option>
+                      <option value="network2">Approve Token</option>
+                  </select>
+                  </div>
+
+            </div>
+          </div>
+
+          <div class="fourth_layer">
+            <div class="fourth_row_1">
+              <div class="input-container">
+                <div class="input_title_div">Token Contract Address:</div>
+                  <input type="text" placeholder="Enter your Token Contract">
+              </div>
+            </div>
           </div>
         </div>
+
+      </div>
+
+      <div class="step_div">
+
+        <div class="step_heading_div">
+           <b>Step 2</b>
+           <button>🔽</button>
+        </div>
+
+        <div class="collapce_box" id="first_step_co_box">
+           
+        </div>
+
       </div>
 
     </div>
 
 </body>
 </html>
-<!-- <script src="assets/js/token.js"></script> -->
+<script src="assets/js/token.js"></script>
 
-<script>
-
-    function displayTime() {
-        const now = new Date();
-        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-        const timeString = now.toLocaleTimeString('en-US', timeOptions);
-        
-        const timeZoneOptions = { timeZoneName: 'long' };
-        const dateTimeFormat = new Intl.DateTimeFormat('en-US', timeZoneOptions);
-        const [{ value: timeZoneName }] = dateTimeFormat.formatToParts(now).filter(part => part.type === 'timeZoneName');
-
-        document.querySelector('#time_zone_time').innerHTML = timeString;
-        document.querySelector('#time_zone_name').innerHTML = timeZoneName;
-
-    }
-    setInterval(() => displayTime(), 1000);
-    displayTime();
-</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', async function () {

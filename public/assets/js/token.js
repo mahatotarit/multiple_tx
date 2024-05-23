@@ -1,24 +1,14 @@
+function displayTime() {
+  const now = new Date();
+  const timeOptions = {hour: '2-digit',minute: '2-digit',second: '2-digit',hour12: true,};
+  const timeString = now.toLocaleTimeString('en-US', timeOptions);
 
-function updateClock() {
-    const now = new Date();
-    
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-    const year = now.getFullYear();
-    
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    
-    const formattedDate = `${day} : ${month} : ${year}`;
-    const formattedTime = `${hours} : ${minutes} : ${seconds}`;
+  const timeZoneOptions = { timeZoneName: 'long' };
+  const dateTimeFormat = new Intl.DateTimeFormat('en-US', timeZoneOptions);
+  const [{ value: timeZoneName }] = dateTimeFormat.formatToParts(now).filter((part) => part.type === 'timeZoneName');
 
-    console.log(now);
-
-    // document.querySelector('#day_month_year_div').innerHTML = formattedDate;
-    document.querySelector('#hour_minute_second_div').innerHTML = formattedTime;
-    
+  document.querySelector('#time_zone_time').innerHTML = timeString;
+  document.querySelector('#time_zone_name').innerHTML = timeZoneName;
 }
-
-// setInterval(updateClock, 1000);
-updateClock();
+setInterval(() => displayTime(), 1000);
+displayTime();

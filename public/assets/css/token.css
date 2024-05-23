@@ -21,11 +21,12 @@
 
 .first_row_box_one,
 .first_row_box_two,
-.first_row_box_three{
+.first_row_box_three,
+.first_row_box_four{
     padding: 10px;
     border-radius: 10px;
     background-color:var(--secondary_color);
-    width: 30%;
+    width: 23%;
     max-height:100px;
     min-height:98px;
 }
@@ -50,34 +51,41 @@
     flex-direction:column;
     gap: 0.5rem;
 }
+.first_row_box_four{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap: 0.5rem;
+}
 
-#time_zone_time{
-  font-size: 1.2rem;
-}
-#time_zone_name{
-  font-size: 0.9rem;
-}
 .first_row_box_three *{
    color: var(--accent_color);
 }
 .first_row_box_two,
-.first_row_box_one{
+.first_row_box_one,
+.first_row_box_four{
     color: var(--accent_color);
 }
 .first_row_box_one .network_logo{
    height: 3rem;
    width: 3rem;
 }
+
+.block_into_number,
+.time_zone_time,
 .gas_price_into_gwei{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
+
+.time_into_title,
+.block_into_title,
 .gas_price_into_title{
     font-size: 0.8rem;
 }
-.time_into_title{
-    font-size: 0.8rem;
-}
-.gas_price_into_usdt{
+.gas_price_into_usdt,
+.block_into_timestapm,
+.time_zone_name{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,4 +220,31 @@
 
 .input_title_div{
     margin: 00rem 00rem 0.5rem 00rem;
+}
+
+.step_div{
+    margin-top: 1rem;
+    border:2px solid var(--secondary_color);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+}
+.step_div .step_heading_div{
+   background-color: var(--secondary_color);
+   padding: 0.5rem 1rem;
+   border-radius: 10px;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+.step_heading_div b{
+    color: var(--white);
+}
+.step_heading_div button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
 }
