@@ -30,7 +30,11 @@
                       &nbsp;USDT
                   </div>
                 </div>
-                <div class="first_row_box_three"></div>
+                <div class="first_row_box_three">
+                  <div class="time_into_title">Time</div>
+                  <div id="time_zone_time"></div>
+                  <div id="time_zone_name"></div>
+                </div>
             </div>
         </div>
 
@@ -38,6 +42,26 @@
 
 </body>
 </html>
+<!-- <script src="assets/js/token.js"></script> -->
+
+<script>
+
+    function displayTime() {
+        const now = new Date();
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+        const timeString = now.toLocaleTimeString('en-US', timeOptions);
+        
+        const timeZoneOptions = { timeZoneName: 'long' };
+        const dateTimeFormat = new Intl.DateTimeFormat('en-US', timeZoneOptions);
+        const [{ value: timeZoneName }] = dateTimeFormat.formatToParts(now).filter(part => part.type === 'timeZoneName');
+
+        document.querySelector('#time_zone_time').innerHTML = timeString;
+        document.querySelector('#time_zone_name').innerHTML = timeZoneName;
+
+    }
+    setInterval(() => displayTime(), 1000);
+    displayTime();
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
@@ -59,3 +83,4 @@
     }
   });
 </script>
+

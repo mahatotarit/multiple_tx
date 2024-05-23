@@ -1,6 +1,3 @@
-*{
-    border: 1px solid black;
-}
 .main{
     padding: 1rem 10%;
 }
@@ -20,6 +17,8 @@
     border-radius: 10px;
     background-color:var(--secondary_color);
     width: 33%;
+    max-height:100px;
+    min-height:98px;
 }
 .first_row_box_one{
     display:flex;
@@ -35,6 +34,20 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+.first_row_box_three{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap: 0.5rem;
+}
+#day_month_year_div,
+#hour_minute_second_div{
+    font-size: 1.2rem;
+}
+.first_row_box_three *{
+   color: var(--accent_color);
+}
 .first_row_box_two,
 .first_row_box_one{
     color: var(--accent_color);
@@ -47,6 +60,9 @@
     font-size: 1.2rem;
 }
 .gas_price_into_title{
+    font-size: 0.8rem;
+}
+.time_into_title{
     font-size: 0.8rem;
 }
 .gas_price_into_usdt{
