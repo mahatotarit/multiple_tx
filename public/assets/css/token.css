@@ -4,6 +4,15 @@
 .main *{
     font-family: 'Courier New', Courier, monospace;
 }
+.action_title_div{
+    margin:1rem 00rem;
+}
+.descriptionof_token_title{
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: 10px;
+    display: inline-block;
+}
 .first_row_1{
     display: flex;
     justify-content: space-between;
@@ -16,7 +25,7 @@
     padding: 10px;
     border-radius: 10px;
     background-color:var(--secondary_color);
-    width: 33%;
+    width: 30%;
     max-height:100px;
     min-height:98px;
 }
@@ -24,7 +33,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-direction: column;
 }
 .first_row_box_two{
@@ -41,9 +50,12 @@
     flex-direction:column;
     gap: 0.5rem;
 }
-#day_month_year_div,
-#hour_minute_second_div{
-    font-size: 1.2rem;
+
+#time_zone_time{
+  font-size: 1.2rem;
+}
+#time_zone_name{
+  font-size: 0.9rem;
 }
 .first_row_box_three *{
    color: var(--accent_color);
@@ -70,4 +82,134 @@
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
+}
+
+
+
+.second_layer .second_row_1 {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.second_layer .second_row_1 .select_parent_div{
+    width: 50%;
+    position: relative;
+
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.second_layer .second_row_1 select {
+    appearance: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    background-color: var(--whtie);
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+.second_layer .second_row_1 select::-ms-expand {
+    display: none;
+}
+
+.second_layer .second_row_1 select option {
+    padding: 10px;
+}
+.second_layer .second_row_1 select:hover, .second_layer .second_row_1 select:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+.third_layer .third_row_1 {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.third_layer .third_row_1 .select_parent_div{
+    width: 100%;
+    position: relative;
+
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.third_layer .third_row_1 select {
+    appearance: none;
+    padding: 1rem;  
+    font-size: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    background-color: var(--white);
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+.third_layer .third_row_1 select::-ms-expand {
+    display: none;
+}
+
+.third_layer .third_row_1 select option {
+    padding: 10px;
+}
+.third_layer .third_row_1 select:hover, .third_layer .third_row_1 select:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+.fourth_layer .fourth_row_1{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.fourth_layer .fourth_row_1 .input-container {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.fourth_layer .fourth_row_1 input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--input_normal_border_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.fourth_layer .fourth_row_1 input:focus {
+    border-color: var(--input_border_focus_color);
+    box-shadow: var(--input_border_box_shadow_focus_color);
+    outline: none;
+}
+
+.input_title_div{
+    margin: 00rem 00rem 0.5rem 00rem;
 }

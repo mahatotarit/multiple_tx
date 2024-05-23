@@ -1,8 +1,16 @@
 :root{
-    --header_bg: #22517f;
+    --header_bg: #000000;
+    /* --header_bg: #22517f; */
     --secondary_color: #1b253f;
     --accent_color: #ffc107;
     --text_color: #fff;
     --background_color: #d3d3d3;
     --white:#ffffff;
+
+    --select_arrow_color:#555;
+
+    --input_border_focus_color:#007bff;
+    --input_border_focus_color:#007bff;
+    --input_border_box_shadow_focus_color:0 0 8px rgba(0, 123, 255, 0.2);
+    --input_normal_border_color:#ccc;
 }
