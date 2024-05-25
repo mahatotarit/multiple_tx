@@ -283,7 +283,6 @@ async function get_gas_price() {
 
 async function chain_action() {
 
-  let network_logo_img = document.querySelector('#network_logo_img');
   let network_desc = document.querySelector('#network_message');
   let network_name_b = document.querySelector('#network_namb_b');
 
@@ -296,12 +295,9 @@ async function chain_action() {
     const networkName = networkNames[chainIdDecimal] || chainId;
     network_name_b.innerHTML = networkName;
     if (!networkNames[chainIdDecimal]){
-      network_logo_img.style.display = 'none';
       network_desc.innerHTML = `Make sure you've chosen the right network on your MetaMask before you continue`;
     }else{
       network_desc.innerHTML = "";
-      network_logo_img.style.display = 'block';
-      network_logo_img.src = 'assets/images/network/ethereum-eth-logo-diamond-purple.svg';
     }
   }
 
