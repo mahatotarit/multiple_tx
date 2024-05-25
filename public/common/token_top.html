@@ -16,10 +16,23 @@
     display: inline-block;
   }
 
-  .first_row_1 {
+  .first_row_1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  #network_namb_b{
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .network_name_desc_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #network_message{
+    font-size: 0.7rem;
   }
 
   .first_row_box_one,
@@ -40,6 +53,12 @@
   }
   .first_row_box_one {
     gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .first_row_box_one *{
+    text-align: center;
   }
   .first_row_box_two,
   .first_row_box_three,
@@ -56,8 +75,9 @@
     color: var(--accent_color);
   }
   .first_row_box_one .network_logo {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
+    display: none;
   }
 
   .block_into_number,
@@ -212,11 +232,13 @@
   <div class="first_row_1 layer_row">
     <div class="first_row_box_one">
       <img
-        class="network_logo"
-        src="assets/images/network/ethereum-eth-logo-diamond-purple.svg"
-        alt=""
+        class="network_logo" id="network_logo_img"
+        src=""
       />
-      <div><b class="network_namb_b">Ethereum</b></div>
+      <div id="network_name_desc_div">
+        <div id="network_namb_b">Ethereum Mainnet</div>
+        <div id="network_message" style="padding: 5px;"></div>
+      </div>
     </div>
     <div class="first_row_box_two">
       <div class="gas_price_into_title">Gas Price</div>

@@ -170,7 +170,7 @@
 </body>
 </html>
 
-<script src="assets/js/token_top.js"></script>
+<script src="assets/js/token/token_top.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
@@ -196,10 +196,12 @@
     }
   });
 
-  function controller(){
+  async function controller(){
+    await enable_window();
     start_time();
     get_block();
-    get_gas_price()
+    get_gas_price();
+    chain_action();
   }
 
 </script>
