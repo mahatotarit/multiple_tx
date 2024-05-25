@@ -16,147 +16,9 @@
 
     <div class="main">
 
-      <div class="action_title_div" id="action_name">
-        <center>
-          <h1>Token Transfer</h1>
+      <div style="width: 100%;" id="top_code"></div>
 
-          <div class="descriptionof_token_title" id="action_description">Transfer Token From Your Compromised Wallet</div>
-        </center>
-      </div>
-        
-      <div class="first_layer all_layer">
-          <div class="first_row_1 layer_row">
-              <div class="first_row_box_one">
-                  <img class="network_logo" src="assets/images/network/ethereum-eth-logo-diamond-purple.svg" alt="">
-                  <div><b>Ethereum</b></div>
-              </div>
-              <div class="first_row_box_two">
-                <div class="gas_price_into_title">Gas Price</div>
-                <div class="gas_price_into_gwei">45 GWEI</div>
-                <div class="gas_price_into_usdt">
-                    Transctions Cost: &nbsp;
-                    <p>3434</p>
-                    &nbsp;USDT
-                </div>
-              </div>
-              <div class="first_row_box_four">
-                <div class="block_into_title">Latest Block</div>
-                <div class="block_into_number">45234234</div>
-                <div class="block_into_timestapm">
-                  Block Destance:&nbsp;<span>3 Sec</span>
-                </div>
-              </div>
-              <div class="first_row_box_three">
-                <div class="time_into_title">Time</div>
-                <div id="time_zone_time" class="time_zone_time"></div>
-                <div id="time_zone_name" class="time_zone_name"></div>
-              </div>
-          </div>
-      </div>
-
-      <!-- step 1 netwok and chain and token contact address  -->
-      <div class="step_div">
-
-        <div class="step_heading_div">
-           <div class="step_name_arrow">
-              <b>Step 1</b>
-              <button>🔽</button>
-           </div>
-           <div class="step_description">
-            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, at!</small>
-           </div>
-        </div>
-
-        <div class="collapce_box" id="first_step_co_box">
-          <div class="second_layer all_layer">
-            <div class="second_row_1 layer_row">
-
-                  <div class="select_parent_div">
-                    <div class="input_title_div">Select Network:</div>
-                    <div class="select_arrow_contrainer">
-                      <select>
-                          <option value="" selected disabled>Select Network</option>
-                          <option value="">Main Network</option>
-                          <option value="">Test Network</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="select_parent_div">
-                    <div class="input_title_div">Select Chain:</div>
-                    <select>
-                      <option value="" selected disabled>Select Chain</option>
-                      <option value="">Ethrerum</option>
-                      <option value="">BNB Chain</option>
-                  </select>
-                  </div>
-
-            </div>
-          </div>
-
-          <div class="third_layer all_layer">
-            <div class="third_row_1 layer_row">
-
-                  <div class="select_parent_div">
-                    <div class="input_title_div">Select Token Action:</div>
-                    <select>
-                      <option value="" selected disabled>Select Token Action</option>
-                      <option value="">Transfer Token</option>
-                      <option value="">Approve Token</option>
-                  </select>
-                  </div>
-
-            </div>
-          </div>
-
-          <div class="fourth_layer all_layer">
-            <div class="fourth_row_1 layer_row">
-              <div class="input-container">
-                <div class="input_title_div">Token Contract Address:</div>
-                  <input type="text" placeholder="Enter your Token Contract">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- step 2 for user wallet private key , target wallet private key , token recipient address  -->
-      <div class="step_div">
-
-        <div class="step_heading_div">
-           <div class="step_name_arrow">
-              <b>Step 2</b>
-              <button>🔽</button>
-           </div>
-           <div class="step_description">
-            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, at!</small>
-           </div>
-        </div>
-
-        <div class="collapce_box" id="second_step_co_box">
-          
-          <div class="five_layer all_layer">
-            
-            <div class="five_row_1 layer_row">
-              <div class="input-container">
-                <div class="input_title_div">Sponser Wallet Private Key:</div>
-                  <input type="text" placeholder="Enter your sponser wallet private key">
-              </div>
-            </div>
-
-            <div class="five_row_2 layer_row">
-              <div class="input-container">
-                <div class="input_title_div">Target Wallet Private Key:</div>
-                  <input type="text" placeholder="Enter your target wallet private key">
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
+      <!-- ============================================================================= -->
 
       <!-- set up user wallet details  -->
       <div class="step_div">
@@ -307,27 +169,36 @@
 
 </body>
 </html>
-<script src="assets/js/token.js"></script>
 
+<script src="assets/js/token_top.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
     try {
       
       const header_fetch = fetch('../header.html');
+      const token_top_fetch = fetch('common/token_top.html');
 
-      const [header_fetch_response] = await Promise.all([header_fetch]);
+      const [header_fetch_response,token_top_fetch_response] = await Promise.all([header_fetch,token_top_fetch]);
 
       if (!header_fetch_response.ok) throw new Error('Network response for header was not ok'); 
+      if (!token_top_fetch_response.ok) throw new Error('Network response for header was not ok'); 
 
       const headerData = await header_fetch_response.text();
+      const token_topData = await token_top_fetch_response.text();
 
       document.querySelector('#header').innerHTML = headerData;
+      document.querySelector('#top_code').innerHTML = token_topData;
 
-      header();
+      controller();
     } catch (error) {
       console.error('Error loading header.html:', error);
     }
   });
-</script>
 
+  function controller(){
+    start_time();
+    get_block();
+  }
+
+</script>

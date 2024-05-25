@@ -4,80 +4,6 @@
 .main *{
     font-family: 'Courier New', Courier, monospace;
 }
-.action_title_div{
-    margin:1rem 00rem;
-}
-.descriptionof_token_title{
-    padding: 0.5rem;
-    background-color: transparent;
-    border-radius: 10px;
-    display: inline-block;
-}
-.first_row_1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}    
-
-.first_row_box_one,
-.first_row_box_two,
-.first_row_box_three,
-.first_row_box_four{
-    padding: 10px;
-    border-radius: 10px;
-    background-color:var(--secondary_color);
-    width: 23.55%;
-    max-height:100px;
-    min-height:98px;
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.first_row_box_one{
-    gap: 1rem;
-}
-.first_row_box_two,
-.first_row_box_three,
-.first_row_box_four{
-    gap: 0.5rem;
-}
-
-.first_row_box_three *{
-   color: var(--accent_color);
-}
-.first_row_box_two,
-.first_row_box_one,
-.first_row_box_four{
-    color: var(--accent_color);
-}
-.first_row_box_one .network_logo{
-   height: 3rem;
-   width: 3rem;
-}
-
-.block_into_number,
-.time_zone_time,
-.gas_price_into_gwei{
-    font-size: 1.3rem;
-}
-
-.time_into_title,
-.block_into_title,
-.gas_price_into_title{
-    font-size: 0.8rem;
-}
-.gas_price_into_usdt,
-.block_into_timestapm,
-.time_zone_name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-}
-
-
 
 .all_layer .layer_row {
     position: relative;
@@ -192,6 +118,7 @@
     transition:0.5s;
     /* display:none; */
 }
+
 .eight_layer .eight_row_1 .input-container{
     display: flex;
     justify-content: space-between;
