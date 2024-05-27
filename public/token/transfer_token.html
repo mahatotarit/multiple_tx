@@ -171,7 +171,7 @@
 </html>
 
 <script src="../assets/js/token/token_top.js"></script>
-<script src="../assets/js/token/token.js"></script>
+<script src="../../assets/js/header.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
@@ -198,14 +198,16 @@
   });
 
   async function controller(){
+    // header.js
+    await connectWallet();
+
     await enable_window();
     start_time();
     get_block();
     get_gas_price();
     chain_action();
-
-    // token.js
     token_fun();
+
   }
 
 </script>
