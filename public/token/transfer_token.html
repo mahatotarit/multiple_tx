@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Token</title>
+    <title>Token Transfer</title>
 
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/token.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/token.css">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
       <div class="step_div">
 
         <div class="step_heading_div">
-           <div class="step_name_arrow">
+           <div class="step_name_arrow step_open_step_div">
               <b>Step 3</b>
               <button>🔽</button>
            </div>
@@ -85,7 +85,7 @@
       <div class="step_div">
 
         <div class="step_heading_div">
-           <div class="step_name_arrow">
+           <div class="step_name_arrow step_open_step_div">
               <b>Step 4</b>
               <button>🔽</button>
            </div>
@@ -141,7 +141,7 @@
       <div class="step_div">
 
         <div class="step_heading_div">
-           <div class="step_name_arrow">
+           <div class="step_name_arrow step_open_step_div">
               <b>Step 5</b>
               <button>🔽</button>
            </div>
@@ -170,14 +170,15 @@
 </body>
 </html>
 
-<script src="assets/js/token/token_top.js"></script>
+<script src="../assets/js/token/token_top.js"></script>
+<script src="../assets/js/token/token.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
     try {
       
-      const header_fetch = fetch('../header.html');
-      const token_top_fetch = fetch('common/token_top.html');
+      const header_fetch = fetch('../../header.html');
+      const token_top_fetch = fetch('../common/token_top.html');
 
       const [header_fetch_response,token_top_fetch_response] = await Promise.all([header_fetch,token_top_fetch]);
 
@@ -202,6 +203,9 @@
     get_block();
     get_gas_price();
     chain_action();
+
+    // token.js
+    token_fun();
   }
 
 </script>

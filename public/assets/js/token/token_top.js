@@ -290,8 +290,6 @@ async function chain_action() {
     const chainId = await window.ethereum.request({ method: 'eth_chainId' });
 
     const chainIdDecimal = parseInt(chainId, 16);
-    console.log(chainIdDecimal);
-
     const networkName = networkNames[chainIdDecimal] || chainId;
     network_name_b.innerHTML = networkName;
     if (!networkNames[chainIdDecimal]){

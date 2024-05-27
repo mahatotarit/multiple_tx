@@ -186,7 +186,7 @@
     width: 100%;
   }
   .step_name_arrow {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     padding: 0.5rem 1rem;
     background-color: var(--secondary_color);
     display: flex;
@@ -204,12 +204,28 @@
   }
   .step_description {
     background-color: white;
+    border-radius: 0px 00px 10px 10px;
+    overflow: auto;
     border: 2px solid var(--secondary_color);
     padding: 1rem;
-    border-radius: 0px 00px 10px 10px;
+    display: none;
+  }
+  .open_step_desc{
+    display: block !important;
   }
   .collapce_box {
+    overflow: auto;
     transition: 0.5s;
+    height: 00px;
+  }
+  .open_collapce_box{
+    height: auto !important;
+  }
+  .step_open_step_div{
+    cursor: pointer;
+  }
+  .border_round_all{
+    border-radius: 10px 10px 0px 0px !important;
   }
 </style>
 
@@ -252,7 +268,7 @@
 <div class="step_div">
 
   <div class="step_heading_div">
-    <div class="step_name_arrow">
+    <div class="step_name_arrow step_open_step_div">
       <b>Step 1</b>
       <button>🔽</button>
     </div>
@@ -261,21 +277,24 @@
     </div>
   </div>
 
+  <div class="collapce_box" id="contract_ad_step_co_box">
     <div class="fourth_layer all_layer">
       <div class="fourth_row_1 layer_row">
         <div class="input-container">
           <div class="input_title_div">Token Contract Address:</div>
-          <input type="text" placeholder="Enter your Token Contract" />
+          <input type="text" id="token_contract_input" placeholder="Enter your Token Contract" />
         </div>
       </div>
     </div>
+  </div>
+
 
 </div>
 
 
 <div class="step_div">
   <div class="step_heading_div">
-    <div class="step_name_arrow">
+    <div class="step_name_arrow step_open_step_div">
       <b>Step 2</b>
       <button>🔽</button>
     </div>
@@ -293,6 +312,7 @@
           <div class="input_title_div">Sponser Wallet Private Key:</div>
           <input
             type="text"
+            id="sponser_wallet_key_input"
             placeholder="Enter your sponser wallet private key"
           />
         </div>
@@ -303,6 +323,7 @@
           <div class="input_title_div">Target Wallet Private Key:</div>
           <input
             type="text"
+             id="target_wallet_key_input"
             placeholder="Enter your target wallet private key"
           />
         </div>
