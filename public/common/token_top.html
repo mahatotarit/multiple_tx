@@ -227,6 +227,23 @@
   .border_round_all{
     border-radius: 10px 10px 0px 0px !important;
   }
+
+  @media (max-width:1000px) {
+    .w-md-100{
+       width: 100% !important;
+    }
+    .d-md-block{
+      display: block !important;
+    }
+    .mt-md-1rem{
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width:580px) {
+    .header_parent{
+       padding: 1rem 3%;
+    }
+  }
 </style>
 
 <div class="action_title_div" id="action_name">
@@ -240,24 +257,24 @@
 </div>
 
 <div class="first_layer all_layer">
-  <div class="first_row_1 layer_row">
-    <div class="first_row_box_one">
+  <div class="first_row_1 layer_row d-md-block">
+    <div class="first_row_box_one w-md-100 mt-md-1rem">
       <div id="network_name_desc_div">
         <div id="network_namb_b">Ethereum Mainnet</div>
         <div id="network_message"></div>
       </div>
     </div>
-    <div class="first_row_box_two">
+    <div class="first_row_box_two w-md-100 mt-md-1rem">
       <div class="gas_price_into_title">Gas Price</div>
       <div class="gas_price_into_gwei" id="gas_price_div">Fetching...</div>
-      <div class="gas_price_into_usdt" id="trans_cost_usdt_gas">Transctions Cost: Fetching... USDT</div>
+      <div class="gas_price_into_usdt" id="trans_cost_usdt_gas">Tx Cost: Fetching... USDT</div>
     </div>
-    <div class="first_row_box_four">
+    <div class="first_row_box_four w-md-100 mt-md-1rem">
       <div class="block_into_title">Latest Block</div>
       <div class="block_into_number" id="latestBlockNumber">Fetching...</div>
       <div class="block_into_timestapm" id="blockDistance">Block Distance: Fetching...</div>
     </div>
-    <div class="first_row_box_three">
+    <div class="first_row_box_three w-md-100 mt-md-1rem">
       <div class="time_into_title">Time</div>
       <div id="time_zone_time" class="time_zone_time"></div>
       <div id="time_zone_name" class="time_zone_name"></div>
@@ -309,7 +326,7 @@
     <div class="five_layer all_layer">
       <div class="five_row_1 layer_row">
         <div class="input-container">
-          <div class="input_title_div">Sponser Wallet Private Key:</div>
+          <div class="input_title_div">Sponsor Wallet Private Key:</div>
           <input
             type="text"
             id="sponser_wallet_key_input"

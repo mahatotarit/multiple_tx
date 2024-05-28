@@ -7,7 +7,7 @@ const networkNames = {
   8453: 'Base Mainnet',
   84531: 'Base Goerli Testnet',
   84532:'Base Sepolia Testnet',
-  59144:'linea',
+  59144:'linea Mainnet',
   59140:'Linea Goerli',
   59141:'Linea Sepolia',
   23888:'Blast Testnet',
@@ -209,6 +209,9 @@ async function get_block() {
   async function set_block_time_distance(pre, latest) {
     let dis = Math.floor((new Date(latest) - new Date(pre)) / 1000);
     let final_dis = Math.floor(dis / (latest_block - pre_block));
+    if (final_dis == 'Infinity' || typeof dis != 'number'){
+      return;
+    }
     if (dis > 0) {
       document.querySelector(
         '#blockDistance',
@@ -274,7 +277,7 @@ async function get_gas_price() {
     let gas_in_usdt = (gasPriceInGwei * 21000 * 0.0000045).toFixed(3);
     document.querySelector(
       '#trans_cost_usdt_gas',
-    ).innerHTML = `Transctions Cost: ${gas_in_usdt} USDT`;
+    ).innerHTML = `Tx Cost: ${gas_in_usdt} USDT (May lie)`;
   }
 
   setInterval(() => {
