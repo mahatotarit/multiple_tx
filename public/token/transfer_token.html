@@ -7,7 +7,7 @@
     <title>Token Transfer</title>
 
     <link rel="stylesheet" href="../../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/token.css">
+    <link rel="stylesheet" href="../assets/css/transfer_token.css">
 
 </head>
 <body>
@@ -29,7 +29,9 @@
               <button>🔽</button>
            </div>
            <div class="step_description">
-            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, at!</small>
+            <small>1. How many transactions do you need to perform in a block to send funds to a compromised wallet?</small><br>
+            <small>2. What is the gas fee for each transaction from your wallet?</small><br>
+            <small>3. What is the transaction value being sent to the compromised wallet?</small>
            </div>
         </div>
 
@@ -42,27 +44,20 @@
                <div class="select_parent_div">
                   <div class="input_title_div">Transctions Per Block:</div>
                     <select>
-                      <option value="" disabled>Select Transctions Per Block</option>
-                      <option value="" selected>2</option>
-                      <option value="">3</option>
-                      <option value="">4</option>
+                      <option value="0" disabled>Select Transctions Per Block</option>
+                      <option value="2" selected>2 - Good for burning tokens</option>
+                      <option value="3">3 - Better for burning tokens</option>
+                      <option value="4">4 - Best for burning tokens</option>
+                      <option value="5">5 - Ideal for burning tokens</option>
                     </select>
                </div>
 
                <div class="select_parent_div">
                 <div class="input_title_div">GassFee Per Transctions:</div>
                   <select>
-                    <option value="" disabled>Select GassFee Per Transctions</option>
-                    <option value="" selected>Default + 1 GWEI</option>
-                    <option value="">Default + 2 GWEI</option>
-                    <option value="">Default + 3 GWEI</option>
-                    <option value="">Default + 4 GWEI</option>
-                    <option value="">Default + 5 GWEI</option>
-                    <option value="">Default + 6 GWEI</option>
-                    <option value="">Default + 7 GWEI</option>
-                    <option value="">Default + 8 GWEI</option>
-                    <option value="">Default + 9 GWEI</option>
-                    <option value="">Default + 10 GWEI</option>
+                    <option value="0" disabled>Select GassFee Per Transctions</option>
+                    <option value="1" selected>Default + 1 GWEI</option>
+                    <option value="2">Default + 2 GWEI</option>
                   </select>
                </div>
 
@@ -90,7 +85,9 @@
               <button>🔽</button>
            </div>
            <div class="step_description">
-            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, at!</small>
+            <small>1. How many tokens do you want to send from the compromised wallet to your wallet?</small><br>
+            <small>2. What gas fee do you want to set for transferring tokens from the compromised wallet to your wallet?</small><br>
+            <small>3. What is your recipient wallet address for receiving tokens from the compromised wallet?</small>
            </div>
         </div>
 
@@ -100,7 +97,7 @@
 
             <div class="seven_row_1 layer_row">
 
-                <div class="input-container">
+                <div class="input-container" style="width: 50% !important;">
                    <div class="input_title_div">Token Value:</div>
                    <input type="number" placeholder="Token Value">
                 </div>
@@ -108,17 +105,10 @@
                <div class="select_parent_div">
                 <div class="input_title_div">GassFee Per Transctions:</div>
                   <select>
-                    <option value="" disabled>Select GassFee Per Transctions</option>
-                    <option value="" selected>Default + 1 GWEI</option>
-                    <option value="">Default + 2 GWEI</option>
-                    <option value="">Default + 3 GWEI</option>
-                    <option value="">Default + 4 GWEI</option>
-                    <option value="">Default + 5 GWEI</option>
-                    <option value="">Default + 6 GWEI</option>
-                    <option value="">Default + 7 GWEI</option>
-                    <option value="">Default + 8 GWEI</option>
-                    <option value="">Default + 9 GWEI</option>
-                    <option value="">Default + 10 GWEI</option>
+                    <option value="0" disabled>Select GassFee Per Transctions</option>
+                    <option value="all" selected>Spend All Compromised Wallet Funds. (Best)</option>
+                    <option value="1">Default + 1 GWEI</option>
+                    <option value="2">Default + 2 GWEI</option>
                   </select>
                </div>
 
@@ -146,7 +136,7 @@
               <button>🔽</button>
            </div>
            <div class="step_description">
-            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, at!</small>
+            <small>1. Your bot is ready. Please preview the details.</small>
            </div>
         </div>
 
@@ -207,6 +197,10 @@
     get_gas_price();
     chain_action();
     token_fun();
+
+    document.querySelector('#wallet_connect_button').addEventListener('click',function(){
+      connectWallet();
+    });
 
   }
 

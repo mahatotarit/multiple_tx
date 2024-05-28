@@ -2,6 +2,7 @@ const networkNames = {
   1: 'Ethereum Mainnet',
   3: 'Ropsten Testnet',
   4: 'Rinkeby Testnet',
+  11155111:'Sepolia Testnet',
   5: 'Goerli Testnet',
   8453: 'Base Mainnet',
   84531: 'Base Goerli Testnet',
