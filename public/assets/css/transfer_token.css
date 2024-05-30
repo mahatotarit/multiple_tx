@@ -142,3 +142,169 @@
     background-color: var(--input_border_focus_color);
     color: var(--white);
 }
+
+
+
+/* modal box design  */
+.token_preview_box{
+    position: fixed ;
+    z-index: +99;
+    width: 100%;
+    top: 00px;
+    height: 100%;
+    background-color: var(--modal_bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+.token_preview_box *{
+    color: var(--white);
+}
+.token_preview_box .details_box{
+    width: 100%;
+    margin: 00px auto;
+    background-color: var(--secondary_color);
+    padding: 1rem;
+    margin: 00px auto;
+    border-radius: 10px;
+    box-shadow: var(--modal_box_shadow);
+}
+.token_preview_box .details_box .step_second{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin: 1rem 00px;
+    gap: 1rem;
+    color: var(--accent_color);
+}
+.step_second > div{
+   background-color: var(--modal_bg);
+   padding: 5px;
+   border-radius: 5px;
+
+   display: flex;
+   justify-content: space-between;
+}
+.step_second > div > span{
+  background-color: var(--pre_span_bg);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.token_preview_box .step_third .pre_btn{
+   padding: 10px;
+   border-radius: 10px;
+   min-width: 10rem;
+   font-weight: bold;
+   cursor: pointer;
+   margin-top: 1rem;
+   font-size: 1rem;
+}
+.token_preview_box .step_third  .edit_preview_btn{
+   background-color: var(--select_arrow_color);
+   color: var(--white);
+}
+.token_preview_box .step_third .previewNext{
+    background-color: var(--input_border_focus_color);
+}
+.close_modal{
+    display: none !important;
+    opacity: 0 !important;
+}
+
+@media (max-width:1000px) {
+    .token_preview_box{
+       padding: 1rem 1rem;
+    }
+    .step_second > div{
+       flex-direction: column;
+    }
+    .step_second > div > span{
+       overflow: auto;
+    }
+}
+
+/* ============ bot running requirement ============================= */
+.bot_running_requirement_box *{
+    color: var(--white);
+}
+
+.bot_running_requirement_box{
+    position: fixed ;
+    z-index: +99;
+    width: 100%;
+    top: 00px;
+    height: 100%;
+    background-color: var(--modal_bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+.bot_running_requirement_inner_box{
+    width: 100%;
+    margin: 00px auto;
+    background-color: var(--secondary_color);
+    padding: 1rem;
+    margin: 00px auto;
+    border-radius: 10px;
+    box-shadow: var(--modal_box_shadow);
+}
+
+.bot_running_requirement_box .step_third .bot_running_btn{
+   padding: 10px;
+   border-radius: 10px;
+   min-width: 10rem;
+   font-weight: bold;
+   cursor: pointer;
+   margin-top: 1rem;
+   font-size: 1rem;
+}
+
+.bot_running_requirement_box .step_third  .bot_running_edit_btn{
+   background-color: var(--select_arrow_color);
+   color: var(--white);
+}
+.bot_running_requirement_box .step_third .bot_running_next{
+    background-color: var(--input_border_focus_color);
+    color: var(--white);
+}
+.bot_running_requirement_box .running_req_row{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.bot_running_requirement_box .status_logo{
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: var(--modal_box_shadow);
+    display: inline-block;
+    width: 22px;
+    height: 24px;
+}
+.bot_running_requirement_box  .running_same_step{
+    background-color: var(--pre_span_bg);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.bot_running_requirement_box .running_frist_first .your-wallet_b{
+    font-size: 0.8rem;
+    padding: 10px;
+    background-color: var(--modal_bg);
+    border-radius: 10px;
+    margin-top: 0.5rem;
+
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+.bot_running_requirement_box .running_frist_first .margin_row-mark{
+    overflow: hidden;
+    width: 100%;
+}
+.bot_running_requirement_box .running_frist_first .re_row_by{
+    margin-top: 0.2rem;
+}

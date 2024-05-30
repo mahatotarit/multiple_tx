@@ -43,7 +43,7 @@
 
                <div class="select_parent_div w-md-100 mt-md-1rem">
                   <div class="input_title_div">Transctions Per Block:</div>
-                    <select>
+                    <select id="transctions_per_block_select">
                       <option value="0" disabled>Select Transctions Per Block</option>
                       <option value="2" selected>2 - Good for burning tokens</option>
                       <option value="3">3 - Better for burning tokens</option>
@@ -54,7 +54,7 @@
 
                <div class="select_parent_div w-md-100 mt-md-1rem">
                 <div class="input_title_div">GassFee Per Transctions:</div>
-                  <select>
+                  <select id="gas_fee_per_block_tx_select">
                     <option value="0" disabled>Select GassFee Per Transctions</option>
                     <option value="1" selected>Default + 1 GWEI</option>
                     <option value="2">Default + 2 GWEI</option>
@@ -66,7 +66,7 @@
             <div class="six_row_2 layer_row">
               <div class="input-container">
                 <div class="input_title_div">Transctions Value:</div>
-                  <input type="number" placeholder="Enter The Transctions Value">
+                  <input type="number" id="per_block_tx_value" placeholder="Enter The Transctions Value">
               </div>
             </div>
 
@@ -99,12 +99,12 @@
 
                 <div class="input-container w-md-100 mt-md-1rem">
                    <div class="input_title_div">Token Value:</div>
-                   <input type="number" placeholder="Token Value">
+                   <input type="number" id="compro_wallet_tx_token_vlaue" placeholder="Token Value">
                 </div>
 
                <div class="select_parent_div w-md-100 mt-md-1rem">
                 <div class="input_title_div">GassFee Per Transctions:</div>
-                  <select>
+                  <select id="compromised_wallet_tx_gas">
                     <option value="0" disabled>Select GassFee Per Transctions</option>
                     <option value="all" selected>Spend All Compromised Wallet Funds. (Best)</option>
                     <option value="1">Default + 1 GWEI</option>
@@ -117,7 +117,7 @@
             <div class="seven_row_2 layer_row">
               <div class="input-container">
                 <div class="input_title_div">Token Recipient Wallet Address:</div>
-                  <input type="text" placeholder="Enter Your Token Recipient Wallet Address">
+                  <input type="text" id="compromised_token_recipient_value" placeholder="Enter Your Token Recipient Wallet Address">
               </div>
             </div>
 
@@ -145,8 +145,8 @@
           <div class="eight_layer all_layer">
              <div class="eight_row_1 layer_row">
                 <div class="input-container">
-                   <button class="reset_button">Reset</button>
-                   <button class="preview_button">Preview</button>
+                   <button class="reset_button" id="reset_button">Reset</button>
+                   <button class="preview_button" id="preview_button">Preview</button>
                 </div>
              </div>
           </div>
@@ -157,8 +157,76 @@
 
     </div>
 
+    <div class="token_preview_box close_modal" id="token_preview_box">
+        <div class="details_box">
+
+           <div class="step_first">
+             <h2>Transfer Token From Your Compromised Wallet</h2>
+           </div>
+           <br>
+
+           <div class="step_second">
+              <div><b>1. Your Target Wallet Private Key : </b><span class="preview_span" id="preview_target_wallet_key_span">Fetching...</span></div>
+              <div><b>2. Your Wallet Private Key : </b><span class="preview_span" id="preview_your_wallet_key_span">Fetching...</span></div>
+              <div><b>3. Compromised Wallet Token Address : </b><span class="preview_span" id="preview_token_address_span">Fetching...</span></div>
+              <div><b>4. Compromised Wallet Token Recipient Address : </b><span class="preview_span" id="preview_token_recipient_address_span">Fetching...</span></div>
+           </div>
+
+           <div class="step_third">
+            <button class="pre_btn edit_preview_btn" id="edit_preview_details_btn">Edit</button>
+            <button class="pre_btn previewNext">Next</button>
+           </div>
+
+        </div>
+    </div>
+
+    <div class="bot_running_requirement_box">
+       <div class="bot_running_requirement_inner_box">
+        <h2>Checking the details for running the bot</h2>
+        <br>  
+
+        <div class="running_frist_first running_same_step">
+          <div><b>Require</b></div>
+
+          <div class="your-wallet_b">
+              <div class="re_row_by">1 Block Tx Value : <span id="">Fetching...</span></div>
+              <div class="re_row_by">1 Block Tx Fee : <span id="">Fetching...</span></div>
+              <div class="margin_row-mark">---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+              <div class="re_row_by">Minimum Reqire : <span id="">Fetching...</span></div>
+          </div>
+
+        </div>
+        <br>  
+
+        <div class="running_second_first running_same_step">
+          <div><b>Check</b></div>
+           <div class="running_req_row">
+             <div class="status_logo"></div>
+             <div class="content_title">Target Wallet Token Balance :</div>
+             <div class="required_balance">4334 ETH</div>
+           </div>
+           <div class="running_req_row">
+             <div class="status_logo"></div>
+             <div class="content_title">Your Wallet Balance :</div>
+             <div class="required_balance">7585 ETH</div>
+           </div>
+        </div>
+
+        <div class="step_third">
+          <button class="bot_running_btn bot_running_edit_btn" id="edit_bot_runnning_details_btn">Edit</button>
+          <button class="bot_running_btn bot_running_next">Check</button>
+        </div>
+
+       </div>
+    </div>
+
 </body>
 </html>
+
+<script src="../../src/ethers.min.js"></script>
+<script src="../../script/transfer_token.js"></script>
+
+<script src="../assets/js/token/transfer_token.js"></script>
 
 <script src="../assets/js/token/token_top.js"></script>
 <script src="../../assets/js/header.js"></script>
@@ -183,12 +251,12 @@
 
       controller();
     } catch (error) {
-      console.error('Error loading header.html:', error);
+      console.error('Error loading header:', error);
     }
   });
 
   async function controller(){
-    // header.js
+    // token token_top.js
     await connectWallet();
 
     await enable_window();
@@ -198,9 +266,15 @@
     chain_action();
     token_fun();
 
+    // assets token folder 
+    another_fun();
+
     document.querySelector('#wallet_connect_button').addEventListener('click',function(){
       connectWallet();
     });
+
+    // script folder
+    main_fun();
 
   }
 
