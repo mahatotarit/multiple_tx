@@ -304,6 +304,7 @@
 .bot_running_requirement_box .running_frist_first .margin_row-mark{
     overflow: hidden;
     width: 100%;
+    height:10px;
 }
 .bot_running_requirement_box .running_frist_first .re_row_by{
     margin-top: 0.2rem;

@@ -267,17 +267,14 @@ async function get_block() {
 }
 
 async function get_gas_price() {
+
   async function get_gas_in_gwei() {
     const gasPrice = await window.ethereum.request({ method: 'eth_gasPrice' });
     const gasPriceInGwei = Math.floor(parseInt(gasPrice, 16) / 1e9);
-    document.querySelector(
-      '#gas_price_div',
-    ).innerHTML = `${gasPriceInGwei} GWEI`;
-
+    document.querySelector('#gas_price_div').innerHTML = `${gasPriceInGwei} GWEI`;
+    
     let gas_in_usdt = (gasPriceInGwei * 21000 * 0.0000045).toFixed(3);
-    document.querySelector(
-      '#trans_cost_usdt_gas',
-    ).innerHTML = `Tx Cost: ${gas_in_usdt} USDT (May lie)`;
+    document.querySelector('#trans_cost_usdt_gas').innerHTML = `Tx Cost: ${gas_in_usdt} USDT (May lie)`;
   }
 
   setInterval(() => {
